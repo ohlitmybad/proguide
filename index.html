@@ -175,7 +175,7 @@ font-size: 21px
   
   <table id="customTable13" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
     <thead>
-        <tr><th><div><a href="https://datamb.football/tos" target="_blank" rel="noopener noreferrer">2024/25 INDEX & RANKS 🔗</a></div></th>
+        <tr><th><div><a href="https://datamb.football/tos" target="_blank" rel="noopener noreferrer">INDEX & RANKS 🔗</a></div></th>
         </tr>
     </thead>
     <tbody>
@@ -450,9 +450,19 @@ font-size: 21px
       customTableBody11.appendChild(tr11);
   });
 
+	  const customRows13 = ["2024/25 update available on the link above"];
+  const customTableBody13 = document.querySelector("#customTable13 tbody");
+
+  customRows13.forEach(text => {
+      const tr13 = document.createElement("tr");
+      const td13 = document.createElement("td");
+      td13.textContent = text;
+      tr13.appendChild(td13);
+      customTableBody13.appendChild(tr13);
+  });
 
 
-  const customRows14 = ["2024/25 data added to Radars, Teams, Plots & Search. Rank and Index tools available on the link below."];
+  const customRows14 = ["2024/25 data added to Radars, Teams, Plots & Search"];
   const customTableBody14 = document.querySelector("#customTable14 tbody");
 
   customRows14.forEach(text => {
