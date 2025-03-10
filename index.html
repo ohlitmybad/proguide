@@ -748,7 +748,7 @@
                              <ul>→ Current threshold for 2024/25: 720 minutes</ul>
                          
                       
-                                <li>Database is updated <strong>every week</strong>.<ul>→ Last update: 03.03.2025</ul></li>
+                                <li>Database is updated <strong>every week</strong>.<ul>→ Last update: 10.03.2025</ul></li>
                               
           
                               <img src="https://i.imgur.com/HKgGFAc.png" alt="DataMB Database" class="single-line-image2">
@@ -1551,12 +1551,12 @@
           
               <section id="news" class="section">
     <h2>News & Updates</h2>
-  <h4>March 8, 2025</h4>
-  <ul>
-    <li><strong>FIX</strong> — Improved UI/UX on the Team Plot tool, now including vertical view for mobile</li>
-  </ul>
-		      
-		      
+  
+    <h4>March 8, 2025</h4>
+    <ul>
+      <li><strong>FIX</strong> — Improved UI/UX on the Team Plot tool, now including vertical view for mobile</li>
+    </ul>
+    
     <h4>February 25, 2025</h4>
     <ul>
       <li><strong>FIX</strong> — Similar data  section now properly reflects the current selection, even when the last player/team is removed from the radar</li>
@@ -1758,66 +1758,67 @@
           </script>
 
 <script>
-  // Translation functionality
-  function setLanguage(language) {
-    localStorage.setItem('preferredLanguage', language);
-    // Update URL with language parameter
-    const url = new URL(window.location.href);
-    if (language === 'en') {
-      url.searchParams.delete('lang');
-    } else {
-      url.searchParams.set('lang', language);
-    }
-    window.history.pushState({}, '', url);
-    applyLanguage(language);
-  }
+
   
   function getPreferredLanguage() {
-    // Check URL parameter first
+    // PRIORITY 1: Check URL parameter first
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
     if (langParam) {
       return langParam;
     }
-    return localStorage.getItem('preferredLanguage') || getBrowserLanguage() || 'en';
+    // PRIORITY 2: Check localStorage
+    const storedLang = localStorage.getItem('preferredLanguage');
+    if (storedLang) {
+      return storedLang;
+    }
+    // PRIORITY 3: Use browser language
+    return getBrowserLanguage() || 'en';
   }
-  
+
   function getBrowserLanguage() {
     return navigator.language.slice(0, 2);
   }
-  
-function applyLanguage(language) {
-    fetch(`locales/${language}.json`)
-      .then(response => response.json())
-  .then(translations => {
-document.querySelectorAll('[data-i18n]').forEach(element => {
-    const keys = element.getAttribute('data-i18n').split('.');
-    let value = translations;
-    for (const key of keys) {
-        value = value[key];
-    }
-    if (value) {
-        if (element.tagName === 'META') {
-            element.setAttribute('content', value);
-        } else if (value.includes('<')) {
-            // If the translation contains HTML
-            element.innerHTML = value;
-        } else {
-            element.textContent = value;
-        }
-    }
-});
-  
 
-  
-        // Update meta tags
-        document.title = translations.meta.title;
-        document.querySelector('meta[name="description"]').setAttribute('content', translations.meta.description);
-        document.querySelector('meta[name="language"]').setAttribute('content', language);
+  function applyLanguage(language) {
+    console.log(language);
+
+    if (language === 'en') {
+      return;
+    }
+
+    
+    fetch(`locales/${language}.json`)
+      .then(response => {
+        // Don't throw an error, just return null if response is not OK
+        return response.ok ? response.json() : null;
+      })
+      .then(translations => {
+        // Only proceed if translations exist
+        if (translations) {
+          document.querySelectorAll('[data-i18n]').forEach(element => {
+            const keys = element.getAttribute('data-i18n').split('.');
+            let value = translations;
+            for (const key of keys) {
+              if (value === undefined || value === null) break;
+              value = value[key];
+            }
+            if (value) {
+              if (element.tagName === 'META') {
+              element.setAttribute('content', value);
+          } else if (value.includes('<')) {
+              element.innerHTML = value;
+          } else {
+              element.textContent = value;
+          }          }
+          });
+        }
+      })
+      .catch(() => {
+        // Completely empty catch block to silently ignore any errors
       });
   }
   
-  // Initialize translations
   const preferredLanguage = getPreferredLanguage();
   applyLanguage(preferredLanguage);
   
