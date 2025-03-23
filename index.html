@@ -1727,6 +1727,7 @@ Non-penalty goals per 90 x9, Goals per 90 x8, xG per 90 x5, Goal conversion % x4
           </script>
 <script>
  
+
   function getPreferredLanguage() {
     // PRIORITY 1: Check URL parameter first
     const urlParams = new URLSearchParams(window.location.search);
@@ -1937,10 +1938,12 @@ Non-penalty goals per 90 x9, Goals per 90 x8, xG per 90 x5, Goal conversion % x4
   
   const preferredLanguage = getPreferredLanguage();
   applyLanguage(preferredLanguage);
-    
-    // Initialize navigation event listeners
-    reattachNavigationEventListeners();
   
+  // BUTTON LANGUAGE SWITCHER REMOVE FOR PAGES WITH NO LANGUAGE SWITCHER
+  document.addEventListener('DOMContentLoaded', function() {    
+
+    reattachNavigationEventListeners();
+  });
 
   </script>
 </body>
