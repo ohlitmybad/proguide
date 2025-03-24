@@ -1688,15 +1688,59 @@ Non-penalty goals per 90 x9, Goals per 90 x8, xG per 90 x5, Goal conversion % x4
       });
   }
   function reattachNavigationEventListeners() {
-              // Add mobile menu toggle functionality
-              const menuToggle = document.querySelector('.menu-toggle');
-              const navContainer = document.querySelector('.nav-container');
-              
-              menuToggle.addEventListener('click', function() {
-                navContainer.classList.toggle('active');
-              });
+    // Add mobile menu toggle functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    
+    menuToggle.addEventListener('click', function() {
+      navContainer.classList.toggle('active');
+    });
 
-              document.querySelectorAll('.nav-container a').forEach(link => {
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navContainer.contains(event.target) && !menuToggle.contains(event.target)) {
+        navContainer.classList.remove('active');
+      }
+    });
+
+    // Add scroll event listener to track section visibility
+    window.addEventListener('scroll', function() {
+      // Find all section headings within the active section
+      const activeSection = document.querySelector('.section.active');
+      if (!activeSection) return;
+
+      const subSections = activeSection.querySelectorAll('div[id]');
+      
+      // Check which subsection is currently in view
+      subSections.forEach(subSection => {
+        const rect = subSection.getBoundingClientRect();
+        const offset = 100; // Adjust this value to change when the active state updates
+
+        if (rect.top <= offset && rect.bottom >= offset) {
+          // Remove active class from all nav items
+          document.querySelectorAll('.nav-container li').forEach(li => {
+            li.classList.remove('active', 'target-active', 'ancestor-active');
+          });
+          
+          // Find and activate corresponding nav link
+          const correspondingLink = document.querySelector(`.nav-container a[href="#${subSection.id}"]`);
+          if (correspondingLink && correspondingLink.parentElement) {
+            correspondingLink.parentElement.classList.add('active', 'target-active');
+            
+            // Add active class to parent items
+            let currentElement = correspondingLink.parentElement.parentElement;
+            while (currentElement && !currentElement.classList.contains('nav-container')) {
+              if (currentElement.tagName === 'LI') {
+                currentElement.classList.add('active', 'ancestor-active');
+              }
+              currentElement = currentElement.parentElement;
+            }
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('.nav-container a').forEach(link => {
       const newLink = link.cloneNode(true);
       if (link.parentNode) {
         link.parentNode.replaceChild(newLink, link);
@@ -1796,12 +1840,21 @@ Non-penalty goals per 90 x9, Goals per 90 x8, xG per 90 x5, Goal conversion % x4
         }
       }
     }
-
+    
       const headerOffset = 9;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    
+  }
+  
+  // Handle initial hash after page load
+  if (window.location.hash) {
+    const target = window.location.hash.substring(1);
+    setTimeout(() => {
+      globalHandleNavigation(target);
+    }, 100);
+  }
   
   
   const preferredLanguage = getPreferredLanguage();
