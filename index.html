@@ -673,7 +673,7 @@
                                                 <ul>→ Current minimum for calendar year leagues 2025 : 500 minutes</ul>
 
                     
-                              Database is updated <strong>every week</strong>.<ul>→ Last update: 01.07.2025</ul>
+                              Database is updated <strong>every week</strong>.<ul>→ Last update: 05.07.2025</ul>
                             
         
                             <img src="https://datamb.football/guideimg/database.webp" alt="DataMB Database" class="single-line-image3">
@@ -702,7 +702,7 @@
               <div id="radar">
                 <h3>Radar — <i>Free & Pro</i></h3>
                 <div class="tool-section">
-                  <div class="tool-description">          <img src="https://datamb.football/guideimg/radar.png" alt="Radar Comparison Tool" class="responsive-image">
+                  <div class="tool-description">          <img src="https://datamb.football/guideimg/radar.webp" alt="Radar Comparison Tool" class="responsive-image">
         
                     <p>The radar comparison tool visually represents player percentile rankings, allowing for the comparison of multiple players' profiles and output. Similar radar profiles in the database are also shown for each player, which Pro users can filter.
                       <ul>
@@ -779,7 +779,7 @@
               <div id="rank">
                 <h3>Rank — <i>Pro</i></h3>
                 <div class="tool-section">
-                  <div class="tool-description">    <img src="https://datamb.football/guideimg/rank.png" alt="Rank Tool" class="responsive-image">
+                  <div class="tool-description">    <img src="https://datamb.football/guideimg/rank.webp" alt="Rank Tool" class="responsive-image">
         
                     <p>Rank any player worldwide against your choice of sample (League, World...) for 100+ metrics, displaying results in both histogram (bar charts) and pizza chart format. Exclusive DataMB tool.</p>
         
@@ -788,7 +788,7 @@
                         <li>Rank (All) contains the players from all 40 leagues</li>
                     </ul>
                     <ul>
-                        <li>Seasons: Current season only (for now)</li>
+                        <li>Seasons: Current & past season</li>
                         <li>Metrics: <a href="#allmetrics">100+ metrics</a> (both per 90 and Total)</li>
                     </ul><br>
                     <h4>How to Use</h4>
@@ -813,10 +813,12 @@
                     <li>Bars will be displayed from best to worst rank. Click the green toggle to switch from this ascending order to a default order of metrics for the player's position, grouped by similar data categories and significance</li>
                     <li>You can restrict the sample further using age filters</li>
                     <li>The tool will display the player's rank in the chosen sample for all of our metrics in bar format. It will also display a pizza chart containing 12 default metrics</li>
-                    <li>Click the chart icon to customize the Pizza chart and add/remove any metric</li>
+                    <li>Click the chart icon to customize the Pizza chart and add/remove any metric. Your choice of metrics for each position will be saved for the duration of your session.</li>
                     <li>The size and color of both pizza segments & rank bars are determined using the percentile value equivalent to the player's rank in the sample</li>
                     <li>Hover on a rank bar to read the raw value for the statistic</li>
                     <li>Click on a rank bar to show/hide the value permanently</li>
+			<li>Click the calendar toggle to switch between current and past season data</li>
+
                   </ul>
         <br>
                 <strong>Note: </strong>If the spinner loads indefinitely, the player may not be in the chosen sample (too old for age selection, Eredivisie/Liga Primeira player compared against Top 5)</p>
@@ -831,11 +833,11 @@
                 <h3>Index — <i>Pro</i></h3>
                 <div class="tool-section">
                   <div class="tool-description">
-                    <img src="https://datamb.football/guideimg/index.png" alt="Index Tool" class="responsive-image">
+                    <img src="https://datamb.football/guideimg/index.webp" alt="Index Tool" class="responsive-image">
                 <p>The Index Tool displays a curated interactive leaderboard for all our metrics and leagues, along with a seasonal performance indicator by league and position.</p>
                 <ul>
                   <li>Leagues: All 40 leagues</li>
-                  <li>Seasons: Current season only (for now)</li>
+                  <li>Seasons: Current & past season</li>
                     <li>Metrics: <a href="#allmetrics">100+ metrics</a> (both per 90 and total)</li>
                 </ul><br>
                 <h4>How to Use</h4>
@@ -844,11 +846,12 @@
                     <li>Default is the Performance Index, our in-house metric aimed at determining who has been the highest performing player throughout the season in a specific league and position</li>
                     <li>This metric is therefore available only for individual leagues and positions. Choice of 'All Leagues' or 'All positions' are greyed out when the metric is selected. Link to metric explanation</li>
                     <li>Some metrics do not have a total version (e.g., PAdj metrics, percentage metrics), but all per 90 metrics are available as totals</li>
-                    <li>Click the green toggle to switch between per 90 and totals</li>
+                    <li>Click the timer toggle to switch between per 90 and totals</li>
                     <li>For the metrics where applicable, click the arrow to sort by ascending or descending order</li>
                     <li>Metrics are sorted by categories (greyed out items in the selectors)</li>
                     <li>Bar size indicate performance relative to the top performer's value in the metric (except for the Performance Index, where 100 is used as the top value)</li>
                     <li>Color indicates player percentile rank for the metric in the sample</li>
+		 <li>Click the calendar toggle to switch between current and past season data</li>
                 </ul>
         
                 <br>
@@ -907,7 +910,7 @@
                 <h3>Team Tools — <i>Free & Pro</i></h3>
                 <div class="tool-section">
                   <div class="tool-description"> 
-                <img src="https://datamb.football/guideimg/teamradar.png" alt="Team Radar Tool" class="responsive-image">
+                <img src="https://datamb.football/guideimg/teamradar.webp" alt="Team Radar Tool" class="responsive-image">
                 <h4>Team Radars</h4>       
                 <ul>
                     <li>Leagues: Top 7 Leagues only</li>
@@ -967,20 +970,20 @@
                     <h4>Goalkeepers</h4>
                     <ul>
                         <li>
-                            <strong>Defensive actions per 90</strong>
-                            <br>Sum of sweeping actions such as interceptions, tackles and ground duels with opposing players; normalized per 90 minutes.
+                            <strong>Save percentage %</strong>
+                            <br>Percentage of shots on target saved by the goalkeeper
                         </li><br>
                         <li>
-                            <strong>Aerials duels per 90</strong>
-                            <br>The number of aerial duels in which the goalkeeper participates; normalized per 90 minutes.
+                            <strong>Aerials duels won per 90</strong>
+                            <br>The number of aerial duels won by the goalkeeper; normalized per 90 minutes.
                           </li><br>
                         <li>
-                            <strong>Exits per 90</strong>
-                            <br>The amount of times the keeper leaves his line (whether to claim a cross or to sweep); normalized per 90 minutes.
+                            <strong>Interceptions (PAdj)</strong>
+                            <br>The amount of interceptions by the goalkeeper, adjusted for possession.
                         </li><br>
                         <li>
-                            <strong>Passes per 90</strong>
-                            <br>The number of passes attempted by the goalkeeper; normalized per 90 minutes.
+                            <strong>Passes completed per 90</strong>
+                            <br>The number of passes completed by the goalkeeper; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Long pass accuracy %</strong>
@@ -1000,19 +1003,19 @@
                     <ul>
                         <li>
                             <strong>Passes completed per 90</strong>
-                            <br>The number of passes successfully completed by a centre-back; normalized per 90 minutes.
+                            <br>The number of passes successfully completed by the centre-back; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Forward pass completion %</strong>
                             <br>Pass completion (completed/attempted), excluding backwards and sideways passes.
                         </li><br>
                         <li>
-                            <strong>Progressive passes per 90</strong>
+                            <strong>Progressive passes completed per 90</strong>
                             <br>Completed passes that help the team significantly advance towards the opponent's goal; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>Defensive actions per 90</strong>
-                            <br>Sum of tackles, interceptions and ground duels won; normalized per 90 minutes.
+                            <strong>Possession won per 90</strong>
+                            <br>Sum of defensive (ground) duels won, tackles, and interceptions; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Defensive duels won %</strong>
@@ -1031,28 +1034,28 @@
                     <h4>Fullbacks</h4>
                     <ul>
                         <li>
-                            <strong>Cross accuracy %</strong>
-                            <br>The percentage of crosses successfully delivered by a full-back.
+                            <strong>Accurate crosses per 90</strong>
+                            <br>The amount of crosses successfully delivered by the full-back; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Expected assists per 90</strong>
-                            <br>The number of assists expected from a full-back based on the quality of their deliveries and the positions of teammates; normalized per 90 minutes.
+                            <br>The number of assists expected from the full-back based on the quality of their deliveries and the positions of teammates; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>Progressive passes per 90</strong>
+                            <strong>Progressive passes completed per 90</strong>
                             <br>Completed passes that help the team significantly advance towards the opponent's goal; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>Defensive actions per 90</strong>
-                            <br>Sum of tackles, interceptions and ground duels won; normalized per 90 minutes.
+                            <strong>Possession won per 90</strong>
+                            <br>Sum of defensive (ground) duels won, tackles, and interceptions; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Defensive duels won %</strong>
-                            <br>The percentage of defensive duels won by a full-back.
+                            <br>The percentage of defensive duels won by the full-back.
                         </li><br>
                         <li>
                             <strong>Aerial duels won %</strong>
-                            <br>The percentage of aerial duels won by a full-back.
+                            <br>The percentage of aerial duels won by the full-back.
                         </li><br>
                         <li>
                             <strong>Progressive carries per 90</strong>
@@ -1064,19 +1067,19 @@
                     <ul>
                         <li>
                             <strong>Duels won %</strong>
-                            <br>The percentage of duels won by a midfielder.
+                            <br>The percentage of ground duels (offensive and defensive) won by the midfielder.
                         </li><br>
                         <li>
-                            <strong>Defensive actions per 90</strong>
-                            <br>Sum of tackles, interceptions and ground duels won; normalized per 90 minutes.
+                            <strong>Possession won per 90</strong>
+                            <br>Sum of defensive (ground) duels won, tackles, and interceptions; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Progressive carries per 90</strong>
                             <br>Runs with the ball that significantly advance the team's position; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>Forward passes per 90</strong>
-                            <br>The number of passes attempted by a midfielder, excluding backwards and sideways passes; normalized per 90 minutes.
+                            <strong>Forward passes completed per 90</strong>
+                            <br>The number of passes completed by the midfielder, excluding backwards and sideways passes; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Forward pass completion %</strong>
@@ -1087,7 +1090,7 @@
                             <br>Open-play passes that directly lead to a goal-scoring opportunity; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>Progressive passes per 90</strong>
+                            <strong>Progressive passes completed per 90</strong>
                             <br>Completed passes that help the team significantly advance towards the opponent's goal; normalized per 90 minutes.
                         </li><br>
                     </ul>
@@ -1100,15 +1103,15 @@
                         </li><br>
                         <li>
                             <strong>Successful dribbles per 90</strong>
-                            <br>The number of dribbles successfully completed by a winger; normalized per 90 minutes.
+                            <br>The number of dribbles successfully completed by the winger; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Non-penalty goals per 90</strong>
-                            <br>The number of goals scored by a winger excluding penalty kicks; normalized per 90 minutes.
+                            <br>The number of goals scored by the winger excluding penalty kicks; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>xG + xA per 90</strong>
-                            <br>The sum of expected goals (xG) and expected assists (xA) for a winger; normalized per 90 minutes.
+                            <strong>npxG+xA per 90</strong>
+                            <br>The sum of non-penalty expected goals (npxG) and expected assists (xA) for the winger; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Assists per 90</strong>
@@ -1119,40 +1122,40 @@
                             <br>Passes that directly lead to a goal-scoring opportunity; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>Attacking actions per 90</strong>
-                            <br>Sum of shots, crosses and dribbles; normalized per 90 minutes.
+                            <strong>Accurate crosses per 90</strong>
+                            <br>The amount of crosses successfully delivered by the winger; normalized per 90 minutes.
                         </li><br>
                     </ul>
         
                     <h4>Strikers</h4>
                     <ul>
                         <li>
-                            <strong>Passes received per 90</strong>
-                            <br>The number of passes received by a striker from his team-mates; normalized per 90 minutes.
+                            <strong>Non-penalty goals per 90</strong>
+                            <br>The number of goals scored by a striker excluding penalty kicks; normalized per 90 minutes.
+                        </li><br>
+                        <li>
+                            <strong>Non-penalty xG per 90</strong>
+                            <br>The number of goals expected from a striker based on the quality of their chances (outside penalties); normalized per 90 minutes.
+                        </li><br>
+                        <li>
+                            <strong>Goal conversion</strong>
+                            <br>The percentage of the striker's shots that converted into goals.
+                        </li><br>
+                        <li>
+			 <strong>Touches in box per 90</strong>
+                            <br>The number of ball touches by the striker inside the opponent penalty area; normalized per 90 minutes.
                         </li><br>
                         <li>
                             <strong>Aerial duels won %</strong>
                             <br>The percentage of aerial duels won by a striker.
                         </li><br>
                         <li>
-                            <strong>Non-penalty goals per 90</strong>
-                            <br>The number of goals scored by a striker excluding penalty kicks; normalized per 90 minutes.
-                        </li><br>
-                        <li>
-                            <strong>Expected goals per 90</strong>
-                            <br>The number of goals expected from a striker based on the quality of their chances; normalized per 90 minutes.
-                        </li><br>
-                        <li>
-                            <strong>Passes to penalty box per 90</strong>
-                            <br>The number of passes delivered by a striker into the opponent's penalty area; normalized per 90 minutes.
-                        </li><br>
-                        <li>
                             <strong>Expected assists per 90</strong>
                             <br>The number of assists expected from a striker based on the quality of their chance creation and the positions of teammates; normalized per 90 minutes.
                         </li><br>
                         <li>
-                            <strong>Attacking actions per 90</strong>
-                            <br>Sum of shots, crosses and dribbles; normalized per 90 minutes.
+                            <strong>Offensive duels won per 90</strong>
+                            <br>The amount of ground duels won by the striker in possession; normalized per 90 minutes
                         </li><br>
                     </ul>
                 </div>
