@@ -1569,1059 +1569,114 @@
                     </ul>
                 </div>
         
+                
                 <div id="performanceindex">
-                    <h4>Performance Index</h4>
-                    <p>The Performance Index is a composite score that measures a player's overall consistency and performance over the league season. It is calculated separately for each league and position, so scores cannot be compared across leagues or positions. This is why other filters are disabled when this metric is selected. Since it reflects seasonal performance, minutes played are heavily factored in to reward players who consistently feature across the year.</p>
+                  <h4>Performance Index</h4>
+                  <p>The Performance Index is a composite score that measures a player's overall consistency and performance over the league season. It is calculated separately for each league and position, so scores cannot be compared across leagues or positions. This is why other filters are disabled when this metric is selected. Since it reflects seasonal performance, minutes played are heavily factored in to reward players who consistently feature across the year.</p>
 
-                    <p>Each position is evaluated using its own set of weighted metrics:</p>
- 
-                    <br>
-                    <div class="perf-table-container">
-                        <div id="goalkeeper" class="position-content active">
-                            <div class="metrics-container">
-                                <div class="position-selector">
-                                    <button class="position-btn active" data-position="goalkeeper">GK</button>
-                                    <button class="position-btn" data-position="centre-back">CB</button>
-                                    <button class="position-btn" data-position="full-back">FB</button>
-                                    <button class="position-btn" data-position="midfielder">CM</button>
-                                    <button class="position-btn" data-position="winger">FW</button>
-                                    <button class="position-btn" data-position="striker">ST</button>
-                                </div>
-                                <div class="metrics-scroll-container">
-                                    <div id="goalkeeper-metrics">
-                                        <div class="metric-item" data-weight="20.41">
-                                            <div class="metric-name"><span>Prevented goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="16.33">
-                                            <div class="metric-name"><span>Minutes played</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="14.29">
-                                            <div class="metric-name"><span>Save percentage %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="10.20">
-                                            <div class="metric-name"><span>Clean sheets</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="10.20">
-                                            <div class="metric-name"><span>Passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.08">
-                                            <div class="metric-name"><span>Pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.08">
-                                            <div class="metric-name"><span>Short pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.08">
-                                            <div class="metric-name"><span>Long pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.08">
-                                            <div class="metric-name"><span>Short passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.08">
-                                            <div class="metric-name"><span>Aerial duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.04">
-                                            <div class="metric-name"><span>Saves per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.04">
-                                            <div class="metric-name"><span>Interceptions (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.04">
-                                            <div class="metric-name"><span>Defensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.04">
-                                            <div class="metric-name"><span>Long passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  <p>Each position is evaluated using its own set of weighted metrics:</p>
 
-                        <div id="striker" class="position-content">
-                            <div class="metrics-container">
-                                <div class="position-selector">
-                                    <button class="position-btn" data-position="goalkeeper">GK</button>
-                                    <button class="position-btn" data-position="centre-back">CB</button>
-                                    <button class="position-btn" data-position="full-back">FB</button>
-                                    <button class="position-btn" data-position="midfielder">CM</button>
-                                    <button class="position-btn" data-position="winger">FW</button>
-                                    <button class="position-btn active" data-position="striker">ST</button>
-                                </div>
-                                <div class="metrics-scroll-container">
-                                    <div id="striker-metrics">
-                                        <div class="metric-item" data-weight="9.35">
-                                            <div class="metric-name"><span>Minutes played</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="9.35">
-                                            <div class="metric-name"><span>Non-penalty goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="7.48">
-                                            <div class="metric-name"><span>Goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="6.54">
-                                            <div class="metric-name"><span>Goals per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="6.54">
-                                            <div class="metric-name"><span>xG per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.67">
-                                            <div class="metric-name"><span>Shots per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.67">
-                                            <div class="metric-name"><span>Assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.74">
-                                            <div class="metric-name"><span>Key passes per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.80">
-                                            <div class="metric-name"><span>npxG per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.80">
-                                            <div class="metric-name"><span>Shots on target %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.80">
-                                            <div class="metric-name"><span>Goal conversion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.80">
-                                            <div class="metric-name"><span>Touches in box per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.80">
-                                            <div class="metric-name"><span>xA per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.80">
-                                            <div class="metric-name"><span>Aerial duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.87">
-                                            <div class="metric-name"><span>xG per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.87">
-                                            <div class="metric-name"><span>npxG/Shot</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.87">
-                                            <div class="metric-name"><span>Progressive carries per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.87">
-                                            <div class="metric-name"><span>Offensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Goals - xG per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Shots on target per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Progressive action rate</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Ball-carrying frequency</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Successful dribbles per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Accelerations per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Fouls suffered per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>xA per 100 passes</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Chance creation ratio</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Accurate crosses per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Deep completions per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Cross accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Pass completion (to penalty box) %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Possession +/-</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Possessions won - lost per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Interceptions (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Defensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Dribble success rate %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Offensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Defensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.93">
-                                            <div class="metric-name"><span>Aerial duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  <br>
+                  <div class="perf-table-container">
+                      <div id="goalkeeper" class="position-content active">
+                          <div class="metrics-container">
+                              <div class="position-selector">
+                                  <button class="position-btn active" data-position="goalkeeper">GK</button>
+                                  <button class="position-btn" data-position="centre-back">CB</button>
+                                  <button class="position-btn" data-position="full-back">FB</button>
+                                  <button class="position-btn" data-position="midfielder">CM</button>
+                                  <button class="position-btn" data-position="winger">FW</button>
+                                  <button class="position-btn" data-position="striker">ST</button>
+                              </div>
+                              <div class="metrics-scroll-container">
+                                  <div id="goalkeeper-metrics"></div>
+                              </div>
+                          </div>
+                      </div>
 
-                        <div id="centre-back" class="position-content">
-                            <div class="metrics-container">
-                                <div class="position-selector">
-                                    <button class="position-btn" data-position="goalkeeper">GK</button>
-                                    <button class="position-btn active" data-position="centre-back">CB</button>
-                                    <button class="position-btn" data-position="full-back">FB</button>
-                                    <button class="position-btn" data-position="midfielder">CM</button>
-                                    <button class="position-btn" data-position="winger">FW</button>
-                                    <button class="position-btn" data-position="striker">ST</button>
-                                </div>
-                                <div class="metrics-scroll-container">
-                                    <div id="centre-back-metrics">
-                                        <div class="metric-item" data-weight="9.68">
-                                            <div class="metric-name"><span>Minutes played</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="8.06">
-                                            <div class="metric-name"><span>Defensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="5.65">
-                                            <div class="metric-name"><span>Aerial duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="5.65">
-                                            <div class="metric-name"><span>Forward pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="5.65">
-                                            <div class="metric-name"><span>Progressive passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="5.65">
-                                            <div class="metric-name"><span>Progressive carries per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.84">
-                                            <div class="metric-name"><span>Possession +/-</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.23">
-                                            <div class="metric-name"><span>Aerial duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.23">
-                                            <div class="metric-name"><span>Pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.23">
-                                            <div class="metric-name"><span>Long pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.23">
-                                            <div class="metric-name"><span>Passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.23">
-                                            <div class="metric-name"><span>Forward passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.42">
-                                            <div class="metric-name"><span>Interceptions (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.42">
-                                            <div class="metric-name"><span>Defensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.42">
-                                            <div class="metric-name"><span>Possessions won - lost per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.42">
-                                            <div class="metric-name"><span>Progressive pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.42">
-                                            <div class="metric-name"><span>Accurate passes to final third per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.42">
-                                            <div class="metric-name"><span>Touches per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.42">
-                                            <div class="metric-name"><span>Progressive action rate</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Possessions won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Interceptions per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Short pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Forward pass ratio</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Short passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Long passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Accurate passes to penalty box per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Through passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Progressive passes (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Key passes per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.61">
-                                            <div class="metric-name"><span>Ball-carrying frequency</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.81">
-                                            <div class="metric-name"><span>Sliding tackles per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.81">
-                                            <div class="metric-name"><span>Sliding tackles (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.81">
-                                            <div class="metric-name"><span>Goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.81">
-                                            <div class="metric-name"><span>Headed goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.81">
-                                            <div class="metric-name"><span>Successful dribbles per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div id="striker" class="position-content">
+                          <div class="metrics-container">
+                              <div class="position-selector">
+                                  <button class="position-btn" data-position="goalkeeper">GK</button>
+                                  <button class="position-btn" data-position="centre-back">CB</button>
+                                  <button class="position-btn" data-position="full-back">FB</button>
+                                  <button class="position-btn" data-position="midfielder">CM</button>
+                                  <button class="position-btn" data-position="winger">FW</button>
+                                  <button class="position-btn active" data-position="striker">ST</button>
+                              </div>
+                              <div class="metrics-scroll-container">
+                                  <div id="striker-metrics"></div>
+                              </div>
+                          </div>
+                      </div>
 
-                        <div id="midfielder" class="position-content">
-                            <div class="metrics-container">
-                                <div class="position-selector">
-                                    <button class="position-btn" data-position="goalkeeper">GK</button>
-                                    <button class="position-btn" data-position="centre-back">CB</button>
-                                    <button class="position-btn" data-position="full-back">FB</button>
-                                    <button class="position-btn active" data-position="midfielder">CM</button>
-                                    <button class="position-btn" data-position="winger">FW</button>
-                                    <button class="position-btn" data-position="striker">ST</button>
-                                </div>
-                                <div class="metrics-scroll-container">
-                                    <div id="midfielder-metrics">
-                                        <div class="metric-item" data-weight="6.52">
-                                            <div class="metric-name"><span>Minutes played</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.91">
-                                            <div class="metric-name"><span>Possession +/-</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.48">
-                                            <div class="metric-name"><span>Assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.48">
-                                            <div class="metric-name"><span>Progressive passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.04">
-                                            <div class="metric-name"><span>Touches per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.04">
-                                            <div class="metric-name"><span>Forward pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.04">
-                                            <div class="metric-name"><span>Progressive carries per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.04">
-                                            <div class="metric-name"><span>Accurate crosses per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.61">
-                                            <div class="metric-name"><span>Key passes per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.61">
-                                            <div class="metric-name"><span>Defensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.61">
-                                            <div class="metric-name"><span>Aerial duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.61">
-                                            <div class="metric-name"><span>Duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.61">
-                                            <div class="metric-name"><span>Passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.61">
-                                            <div class="metric-name"><span>Ball-carrying frequency</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Possessions won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Possessions won - lost per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Interceptions (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Progressive pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Forward passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Progressive action rate</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>Successful dribbles per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.17">
-                                            <div class="metric-name"><span>npxG per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.74">
-                                            <div class="metric-name"><span>Interceptions per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.74">
-                                            <div class="metric-name"><span>xA per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.74">
-                                            <div class="metric-name"><span>Shot assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.74">
-                                            <div class="metric-name"><span>Non-penalty goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Defensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Forward pass ratio</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Short passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Long passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Accurate passes to final third per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Through passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Short pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Long pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>xA per 100 passes</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Chance creation ratio</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Offensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Dribbles per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Goals per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>xG per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.30">
-                                            <div class="metric-name"><span>Fouls suffered per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.87">
-                                            <div class="metric-name"><span>Aerial duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.87">
-                                            <div class="metric-name"><span>Accurate passes to penalty box per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.87">
-                                            <div class="metric-name"><span>Shots on target per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Sliding tackles per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Sliding tackles (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Accelerations per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Progressive passes (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Pre-assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Pass completion (to final third) %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Pass completion (to penalty box) %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Through pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Cross accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Dribble success rate %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.43">
-                                            <div class="metric-name"><span>Offensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div id="centre-back" class="position-content">
+                          <div class="metrics-container">
+                              <div class="position-selector">
+                                  <button class="position-btn" data-position="goalkeeper">GK</button>
+                                  <button class="position-btn active" data-position="centre-back">CB</button>
+                                  <button class="position-btn" data-position="full-back">FB</button>
+                                  <button class="position-btn" data-position="midfielder">CM</button>
+                                  <button class="position-btn" data-position="winger">FW</button>
+                                  <button class="position-btn" data-position="striker">ST</button>
+                              </div>
+                              <div class="metrics-scroll-container">
+                                  <div id="centre-back-metrics"></div>
+                              </div>
+                          </div>
+                      </div>
 
-                        <div id="winger" class="position-content">
-                            <div class="metrics-container">
-                                <div class="position-selector">
-                                    <button class="position-btn" data-position="goalkeeper">GK</button>
-                                    <button class="position-btn" data-position="centre-back">CB</button>
-                                    <button class="position-btn" data-position="full-back">FB</button>
-                                    <button class="position-btn" data-position="midfielder">CM</button>
-                                    <button class="position-btn active" data-position="winger">FW</button>
-                                    <button class="position-btn" data-position="striker">ST</button>
-                                </div>
-                                <div class="metrics-scroll-container">
-                                    <div id="winger-metrics">
-                                        <div class="metric-item" data-weight="7.93">
-                                            <div class="metric-name"><span>Minutes played</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="6.10">
-                                            <div class="metric-name"><span>Non-penalty goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="6.10">
-                                            <div class="metric-name"><span>Assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="5.49">
-                                            <div class="metric-name"><span>Successful dribbles per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="5.49">
-                                            <div class="metric-name"><span>xA per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="5.49">
-                                            <div class="metric-name"><span>Key passes per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.88">
-                                            <div class="metric-name"><span>Goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.88">
-                                            <div class="metric-name"><span>npxG per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.88">
-                                            <div class="metric-name"><span>Accurate crosses per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.27">
-                                            <div class="metric-name"><span>Offensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.66">
-                                            <div class="metric-name"><span>Progressive carries per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.05">
-                                            <div class="metric-name"><span>Goals per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.05">
-                                            <div class="metric-name"><span>Shots on target per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.05">
-                                            <div class="metric-name"><span>Touches per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.83">
-                                            <div class="metric-name"><span>Progressive passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.83">
-                                            <div class="metric-name"><span>Progressive action rate</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.83">
-                                            <div class="metric-name"><span>xG per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.83">
-                                            <div class="metric-name"><span>Goal conversion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.83">
-                                            <div class="metric-name"><span>Goals - xG per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.83">
-                                            <div class="metric-name"><span>Possession +/-</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.22">
-                                            <div class="metric-name"><span>Ball-carrying frequency</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.22">
-                                            <div class="metric-name"><span>Dribbles per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.22">
-                                            <div class="metric-name"><span>Fouls suffered per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.22">
-                                            <div class="metric-name"><span>Shot assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.22">
-                                            <div class="metric-name"><span>Chance creation ratio</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.22">
-                                            <div class="metric-name"><span>Passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.22">
-                                            <div class="metric-name"><span>Accurate passes to penalty box per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Accelerations per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Deep completions per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>xA per 100 passes</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Pre-assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Long passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Through passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Pass completion (to penalty box) %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Progressive pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Shots on target %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Cross accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Dribble success rate %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Offensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Interceptions (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Defensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Aerial duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Defensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Aerial duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>Possessions won - lost per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.61">
-                                            <div class="metric-name"><span>npxG/Shot</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div id="midfielder" class="position-content">
+                          <div class="metrics-container">
+                              <div class="position-selector">
+                                  <button class="position-btn" data-position="goalkeeper">GK</button>
+                                  <button class="position-btn" data-position="centre-back">CB</button>
+                                  <button class="position-btn" data-position="full-back">FB</button>
+                                  <button class="position-btn active" data-position="midfielder">CM</button>
+                                  <button class="position-btn" data-position="winger">FW</button>
+                                  <button class="position-btn" data-position="striker">ST</button>
+                              </div>
+                              <div class="metrics-scroll-container">
+                                  <div id="midfielder-metrics"></div>
+                              </div>
+                          </div>
+                      </div>
 
-                        <div id="full-back" class="position-content">
-                            <div class="metrics-container">
-                                <div class="position-selector">
-                                    <button class="position-btn" data-position="goalkeeper">GK</button>
-                                    <button class="position-btn" data-position="centre-back">CB</button>
-                                    <button class="position-btn active" data-position="full-back">FB</button>
-                                    <button class="position-btn" data-position="midfielder">CM</button>
-                                    <button class="position-btn" data-position="winger">FW</button>
-                                    <button class="position-btn" data-position="striker">ST</button>
-                                </div>
-                                <div class="metrics-scroll-container">
-                                    <div id="full-back-metrics">
-                                        <div class="metric-item" data-weight="6.36">
-                                            <div class="metric-name"><span>Minutes played</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.24">
-                                            <div class="metric-name"><span>Progressive carries per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.24">
-                                            <div class="metric-name"><span>xA per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.24">
-                                            <div class="metric-name"><span>Defensive duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.24">
-                                            <div class="metric-name"><span>Aerial duels won %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.24">
-                                            <div class="metric-name"><span>Successful dribbles per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.24">
-                                            <div class="metric-name"><span>Accurate crosses per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="4.24">
-                                            <div class="metric-name"><span>Offensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.81">
-                                            <div class="metric-name"><span>Progressive passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.39">
-                                            <div class="metric-name"><span>Assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="3.39">
-                                            <div class="metric-name"><span>Key passes per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.97">
-                                            <div class="metric-name"><span>Ball-carrying frequency</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.97">
-                                            <div class="metric-name"><span>Long passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.97">
-                                            <div class="metric-name"><span>npxG per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Dribbles per 100 touches</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Progressive action rate</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Forward pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Short pass completion %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Possession +/-</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Accurate passes to final third per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.54">
-                                            <div class="metric-name"><span>Accurate passes to penalty box per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.12">
-                                            <div class="metric-name"><span>Interceptions (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.12">
-                                            <div class="metric-name"><span>Forward passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.12">
-                                            <div class="metric-name"><span>xA per 100 passes</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="2.12">
-                                            <div class="metric-name"><span>Chance creation ratio</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.69">
-                                            <div class="metric-name"><span>Accelerations per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.69">
-                                            <div class="metric-name"><span>Shot assists per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.69">
-                                            <div class="metric-name"><span>Short passes completed per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.69">
-                                            <div class="metric-name"><span>Long pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.69">
-                                            <div class="metric-name"><span>Progressive pass accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.69">
-                                            <div class="metric-name"><span>Non-penalty goals per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="1.27">
-                                            <div class="metric-name"><span>Cross accuracy %</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.85">
-                                            <div class="metric-name"><span>Possessions won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.85">
-                                            <div class="metric-name"><span>Sliding tackles (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.85">
-                                            <div class="metric-name"><span>Defensive duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.85">
-                                            <div class="metric-name"><span>Aerial duels won per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.42">
-                                            <div class="metric-name"><span>Possessions won - lost per 90</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                        <div class="metric-item" data-weight="0.42">
-                                            <div class="metric-name"><span>Progressive passes (PAdj)</span></div>
-                                            <div class="weight-bar"><div class="weight-fill"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <p>For each player, we look at their stats compared to others in the same league and position and compute their percentile rank for each metric. Then, we combine and weight these percentiles based on the metric's importance. This creates an average performance score, which we then normalize, scale, and transform to fit a digestible range. A score of 99 is awarded to a player in each position who achieves the highest dominance over their league peers.</p>
-                <br></div>
+                      <div id="winger" class="position-content">
+                          <div class="metrics-container">
+                              <div class="position-selector">
+                                  <button class="position-btn" data-position="goalkeeper">GK</button>
+                                  <button class="position-btn" data-position="centre-back">CB</button>
+                                  <button class="position-btn" data-position="full-back">FB</button>
+                                  <button class="position-btn" data-position="midfielder">CM</button>
+                                  <button class="position-btn active" data-position="winger">FW</button>
+                                  <button class="position-btn" data-position="striker">ST</button>
+                              </div>
+                              <div class="metrics-scroll-container">
+                                  <div id="winger-metrics"></div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div id="full-back" class="position-content">
+                          <div class="metrics-container">
+                              <div class="position-selector">
+                                  <button class="position-btn" data-position="goalkeeper">GK</button>
+                                  <button class="position-btn" data-position="centre-back">CB</button>
+                                  <button class="position-btn active" data-position="full-back">FB</button>
+                                  <button class="position-btn" data-position="midfielder">CM</button>
+                                  <button class="position-btn" data-position="winger">FW</button>
+                                  <button class="position-btn" data-position="striker">ST</button>
+                              </div>
+                              <div class="metrics-scroll-container">
+                                  <div id="full-back-metrics"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <p>For each player, we look at their stats compared to others in the same league and position and compute their percentile rank for each metric. Then, we combine and weight these percentiles based on the metric's importance. This creates an average performance score, which we then normalize, scale, and transform to fit a digestible range. A score of 99 is awarded to a player in each position who achieves the highest dominance over their league peers.</p>
+              <br></div>
         
                 <div id="possession">
                     <h4>Possession +/-</h4>
@@ -2800,7 +1855,7 @@ between players with the same name</li>
   </li>
   <br><li><strong>NEW</strong> — Rank tool: Search bar now has autocomplete and no longer requires manually selecting from the dropdown</li>
   <br><li><strong>NEW</strong> — Stripe payments: added 6mo/1yr plans, links on join page, and immediate subscriber processing</li>
-  <br><li><strong>NEW</strong> — New contact address for business inquiries: contact@datamb.football</li>
+  <br><li><strong>NEW</strong> — New contact address for business inquiries: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5a6aaabb1a4a6b185a1a4b1a4a8a7eba3aaaab1a7a4a9a9">[email&#160;protected]</a></li>
 <br>
   <li><strong>FIX</strong> — Search bars now handle the "ł" character; it can be searched as "l"</li>
   <br><li><strong>FIX</strong> — Switched to a new DNS for faster, more secure loading, better caching, and fixed connection issues (notably in Cameroon)</li>
@@ -2919,7 +1974,7 @@ between players with the same name</li>
             <br>
             <iconify-icon icon="mdi:email" width="20" height="20"
               style="vertical-align: middle; margin-right: 3px;"></iconify-icon>
-            <a href="mailto:contact@datamb.football">contact@datamb.football</a>
+            <a href="/cdn-cgi/l/email-protection#bbd8d4d5cfdad8cffbdfdacfdad6d995ddd4d4cfd9dad7d7"><span class="__cf_email__" data-cfemail="284b47465c494b5c684c495c49454a064e47475c4a494444">[email&#160;protected]</span></a>
             
               
 
@@ -3206,39 +2261,298 @@ between players with the same name</li>
   });
 
   
-  // Performance Index Table JavaScript - Updated to read from HTML
+  // Performance Index Table JavaScript - Exact from hi.html
+  const positionData = {
+      goalkeeper: [
+          { name: "Prevented goals per 90", weight: 20.41 },
+          { name: "Minutes played", weight: 16.33 },
+          { name: "Save percentage %", weight: 14.29 },
+          { name: "Clean sheets", weight: 10.20 },
+          { name: "Passes completed per 90", weight: 10.20 },
+          { name: "Pass completion %", weight: 4.08 },
+          { name: "Short pass completion %", weight: 4.08 },
+          { name: "Long pass accuracy %", weight: 4.08 },
+          { name: "Short passes completed per 90", weight: 4.08 },
+          { name: "Aerial duels won per 90", weight: 4.08 },
+          { name: "Saves per 90", weight: 2.04 },
+          { name: "Interceptions (PAdj)", weight: 2.04 },
+          { name: "Defensive duels won per 90", weight: 2.04 },
+          { name: "Long passes completed per 90", weight: 2.04 },
+      ],
+      striker: [
+          { name: "Minutes played", weight: 9.35 },
+          { name: "Non-penalty goals per 90", weight: 9.35 },
+          { name: "Goals per 90", weight: 7.48 },
+          { name: "Goals per 100 touches", weight: 6.54 },
+          { name: "xG per 100 touches", weight: 6.54 },
+          { name: "Shots per 90", weight: 4.67 },
+          { name: "Assists per 90", weight: 4.67 },
+          { name: "Key passes per 90", weight: 3.74 },
+          { name: "npxG per 90", weight: 2.80 },
+          { name: "Shots on target %", weight: 2.80 },
+          { name: "Goal conversion %", weight: 2.80 },
+          { name: "Touches in box per 90", weight: 2.80 },
+          { name: "xA per 90", weight: 2.80 },
+          { name: "Aerial duels won %", weight: 2.80 },
+          { name: "xG per 90", weight: 1.87 },
+          { name: "npxG/Shot", weight: 1.87 },
+          { name: "Progressive carries per 90", weight: 1.87 },
+          { name: "Offensive duels won per 90", weight: 1.87 },
+          { name: "Goals - xG per 90", weight: 0.93 },
+          { name: "Shots on target per 90", weight: 0.93 },
+          { name: "Duels won per 90", weight: 0.93 },
+          { name: "Progressive action rate", weight: 0.93 },
+          { name: "Ball-carrying frequency", weight: 0.93 },
+          { name: "Successful dribbles per 90", weight: 0.93 },
+          { name: "Accelerations per 90", weight: 0.93 },
+          { name: "Fouls suffered per 90", weight: 0.93 },
+          { name: "xA per 100 passes", weight: 0.93 },
+          { name: "Chance creation ratio", weight: 0.93 },
+          { name: "Accurate crosses per 90", weight: 0.93 },
+          { name: "Deep completions per 90", weight: 0.93 },
+          { name: "Cross accuracy %", weight: 0.93 },
+          { name: "Pass completion %", weight: 0.93 },
+          { name: "Pass completion (to penalty box) %", weight: 0.93 },
+          { name: "Passes completed per 90", weight: 0.93 },
+          { name: "Possession +/-", weight: 0.93 },
+          { name: "Possessions won - lost per 90", weight: 0.93 },
+          { name: "Duels won %", weight: 0.93 },
+          { name: "Interceptions (PAdj)", weight: 0.93 },
+          { name: "Defensive duels won %", weight: 0.93 },
+          { name: "Dribble success rate %", weight: 0.93 },
+          { name: "Offensive duels won %", weight: 0.93 },
+          { name: "Defensive duels won per 90", weight: 0.93 },
+          { name: "Aerial duels won per 90", weight: 0.93 }
+      ],
+      "centre-back": [
+          { name: "Minutes played", weight: 9.68 },
+          { name: "Defensive duels won %", weight: 8.06 },
+          { name: "Aerial duels won %", weight: 5.65 },
+          { name: "Forward pass completion %", weight: 5.65 },
+          { name: "Progressive passes completed per 90", weight: 5.65 },
+          { name: "Progressive carries per 90", weight: 5.65 },
+          { name: "Possession +/-", weight: 4.84 },
+          { name: "Aerial duels won per 90", weight: 3.23 },
+          { name: "Pass completion %", weight: 3.23 },
+          { name: "Long pass accuracy %", weight: 3.23 },
+          { name: "Passes completed per 90", weight: 3.23 },
+          { name: "Forward passes completed per 90", weight: 3.23 },
+          { name: "Interceptions (PAdj)", weight: 2.42 },
+          { name: "Defensive duels won per 90", weight: 2.42 },
+          { name: "Possessions won - lost per 90", weight: 2.42 },
+          { name: "Progressive pass accuracy %", weight: 2.42 },
+          { name: "Accurate passes to final third per 90", weight: 2.42 },
+          { name: "Touches per 90", weight: 2.42 },
+          { name: "Progressive action rate", weight: 2.42 },
+          { name: "Possessions won per 90", weight: 1.61 },
+          { name: "Interceptions per 90", weight: 1.61 },
+          { name: "Short pass completion %", weight: 1.61 },
+          { name: "Forward pass ratio", weight: 1.61 },
+          { name: "Short passes completed per 90", weight: 1.61 },
+          { name: "Long passes completed per 90", weight: 1.61 },
+          { name: "Accurate passes to penalty box per 90", weight: 1.61 },
+          { name: "Through passes completed per 90", weight: 1.61 },
+          { name: "Progressive passes (PAdj)", weight: 1.61 },
+          { name: "Key passes per 90", weight: 1.61 },
+          { name: "Ball-carrying frequency", weight: 1.61 },
+          { name: "Sliding tackles per 90", weight: 0.81 },
+          { name: "Sliding tackles (PAdj)", weight: 0.81 },
+          { name: "Goals per 90", weight: 0.81 },
+          { name: "Headed goals per 90", weight: 0.81 },
+          { name: "Successful dribbles per 90", weight: 0.81 }
+      ],
+      midfielder: [
+          { name: "Minutes played", weight: 6.52 },
+          { name: "Possession +/-", weight: 3.91 },
+          { name: "Assists per 90", weight: 3.48 },
+          { name: "Progressive passes completed per 90", weight: 3.48 },
+          { name: "Touches per 90", weight: 3.04 },
+          { name: "Forward pass completion %", weight: 3.04 },
+          { name: "Progressive carries per 90", weight: 3.04 },
+          { name: "Accurate crosses per 90", weight: 3.04 },
+          { name: "Key passes per 90", weight: 2.61 },
+          { name: "Defensive duels won %", weight: 2.61 },
+          { name: "Aerial duels won %", weight: 2.61 },
+          { name: "Duels won per 90", weight: 2.61 },
+          { name: "Passes completed per 90", weight: 2.61 },
+          { name: "Ball-carrying frequency", weight: 2.61 },
+          { name: "Possessions won per 90", weight: 2.17 },
+          { name: "Possessions won - lost per 90", weight: 2.17 },
+          { name: "Interceptions (PAdj)", weight: 2.17 },
+          { name: "Pass completion %", weight: 2.17 },
+          { name: "Progressive pass accuracy %", weight: 2.17 },
+          { name: "Forward passes completed per 90", weight: 2.17 },
+          { name: "Progressive action rate", weight: 2.17 },
+          { name: "Successful dribbles per 90", weight: 2.17 },
+          { name: "npxG per 90", weight: 2.17 },
+          { name: "Interceptions per 90", weight: 1.74 },
+          { name: "xA per 90", weight: 1.74 },
+          { name: "Shot assists per 90", weight: 1.74 },
+          { name: "Non-penalty goals per 90", weight: 1.74 },
+          { name: "Defensive duels won per 90", weight: 1.30 },
+          { name: "Duels won %", weight: 1.30 },
+          { name: "Forward pass ratio", weight: 1.30 },
+          { name: "Short passes completed per 90", weight: 1.30 },
+          { name: "Long passes completed per 90", weight: 1.30 },
+          { name: "Accurate passes to final third per 90", weight: 1.30 },
+          { name: "Through passes completed per 90", weight: 1.30 },
+          { name: "Short pass completion %", weight: 1.30 },
+          { name: "Long pass accuracy %", weight: 1.30 },
+          { name: "xA per 100 passes", weight: 1.30 },
+          { name: "Chance creation ratio", weight: 1.30 },
+          { name: "Offensive duels won per 90", weight: 1.30 },
+          { name: "Dribbles per 100 touches", weight: 1.30 },
+          { name: "Goals per 100 touches", weight: 1.30 },
+          { name: "xG per 100 touches", weight: 1.30 },
+          { name: "Fouls suffered per 90", weight: 1.30 },
+          { name: "Aerial duels won per 90", weight: 0.87 },
+          { name: "Accurate passes to penalty box per 90", weight: 0.87 },
+          { name: "Shots on target per 90", weight: 0.87 },
+          { name: "Sliding tackles per 90", weight: 0.43 },
+          { name: "Sliding tackles (PAdj)", weight: 0.43 },
+          { name: "Accelerations per 90", weight: 0.43 },
+          { name: "Progressive passes (PAdj)", weight: 0.43 },
+          { name: "Pre-assists per 90", weight: 0.43 },
+          { name: "Pass completion (to final third) %", weight: 0.43 },
+          { name: "Pass completion (to penalty box) %", weight: 0.43 },
+          { name: "Through pass completion %", weight: 0.43 },
+          { name: "Cross accuracy %", weight: 0.43 },
+          { name: "Dribble success rate %", weight: 0.43 },
+          { name: "Offensive duels won %", weight: 0.43 }
+      ],
+      winger: [
+          { name: "Minutes played", weight: 7.93 },
+          { name: "Non-penalty goals per 90", weight: 6.10 },
+          { name: "Assists per 90", weight: 6.10 },
+          { name: "Successful dribbles per 90", weight: 5.49 },
+          { name: "xA per 90", weight: 5.49 },
+          { name: "Key passes per 90", weight: 5.49 },
+          { name: "Goals per 90", weight: 4.88 },
+          { name: "npxG per 90", weight: 4.88 },
+          { name: "Accurate crosses per 90", weight: 4.88 },
+          { name: "Offensive duels won per 90", weight: 4.27 },
+          { name: "Progressive carries per 90", weight: 3.66 },
+          { name: "Goals per 100 touches", weight: 3.05 },
+          { name: "Shots on target per 90", weight: 3.05 },
+          { name: "Touches per 90", weight: 3.05 },
+          { name: "Progressive passes completed per 90", weight: 1.83 },
+          { name: "Progressive action rate", weight: 1.83 },
+          { name: "xG per 100 touches", weight: 1.83 },
+          { name: "Goal conversion %", weight: 1.83 },
+          { name: "Goals - xG per 90", weight: 1.83 },
+          { name: "Possession +/-", weight: 1.83 },
+          { name: "Ball-carrying frequency", weight: 1.22 },
+          { name: "Dribbles per 100 touches", weight: 1.22 },
+          { name: "Fouls suffered per 90", weight: 1.22 },
+          { name: "Shot assists per 90", weight: 1.22 },
+          { name: "Chance creation ratio", weight: 1.22 },
+          { name: "Passes completed per 90", weight: 1.22 },
+          { name: "Accurate passes to penalty box per 90", weight: 1.22 },
+          { name: "Accelerations per 90", weight: 0.61 },
+          { name: "Deep completions per 90", weight: 0.61 },
+          { name: "xA per 100 passes", weight: 0.61 },
+          { name: "Pre-assists per 90", weight: 0.61 },
+          { name: "Long passes completed per 90", weight: 0.61 },
+          { name: "Through passes completed per 90", weight: 0.61 },
+          { name: "Pass completion %", weight: 0.61 },
+          { name: "Pass completion (to penalty box) %", weight: 0.61 },
+          { name: "Progressive pass accuracy %", weight: 0.61 },
+          { name: "Shots on target %", weight: 0.61 },
+          { name: "Cross accuracy %", weight: 0.61 },
+          { name: "Dribble success rate %", weight: 0.61 },
+          { name: "Offensive duels won %", weight: 0.61 },
+          { name: "Interceptions (PAdj)", weight: 0.61 },
+          { name: "Defensive duels won per 90", weight: 0.61 },
+          { name: "Aerial duels won per 90", weight: 0.61 },
+          { name: "Defensive duels won %", weight: 0.61 },
+          { name: "Aerial duels won %", weight: 0.61 },
+          { name: "Possessions won - lost per 90", weight: 0.61 },
+          { name: "npxG/Shot", weight: 0.61 }
+      ],
+      "full-back": [
+          { name: "Minutes played", weight: 6.36 },
+          { name: "Progressive carries per 90", weight: 4.24 },
+          { name: "xA per 90", weight: 4.24 },
+          { name: "Defensive duels won %", weight: 4.24 },
+          { name: "Aerial duels won %", weight: 4.24 },
+          { name: "Successful dribbles per 90", weight: 4.24 },
+          { name: "Accurate crosses per 90", weight: 4.24 },
+          { name: "Offensive duels won per 90", weight: 4.24 },
+          { name: "Progressive passes completed per 90", weight: 3.81 },
+          { name: "Assists per 90", weight: 3.39 },
+          { name: "Key passes per 90", weight: 3.39 },
+          { name: "Ball-carrying frequency", weight: 2.97 },
+          { name: "Long passes completed per 90", weight: 2.97 },
+          { name: "npxG per 90", weight: 2.97 },
+          { name: "Dribbles per 100 touches", weight: 2.54 },
+          { name: "Progressive action rate", weight: 2.54 },
+          { name: "Pass completion %", weight: 2.54 },
+          { name: "Forward pass completion %", weight: 2.54 },
+          { name: "Short pass completion %", weight: 2.54 },
+          { name: "Possession +/-", weight: 2.54 },
+          { name: "Accurate passes to final third per 90", weight: 2.54 },
+          { name: "Accurate passes to penalty box per 90", weight: 2.54 },
+          { name: "Interceptions (PAdj)", weight: 2.12 },
+          { name: "Forward passes completed per 90", weight: 2.12 },
+          { name: "xA per 100 passes", weight: 2.12 },
+          { name: "Chance creation ratio", weight: 2.12 },
+          { name: "Accelerations per 90", weight: 1.69 },
+          { name: "Shot assists per 90", weight: 1.69 },
+          { name: "Short passes completed per 90", weight: 1.69 },                
+          { name: "Long pass accuracy %", weight: 1.69 },
+          { name: "Progressive pass accuracy %", weight: 1.69 },
+          { name: "Non-penalty goals per 90", weight: 1.69 },
+          { name: "Cross accuracy %", weight: 1.27 },
+          { name: "Possessions won per 90", weight: 0.85 },
+          { name: "Sliding tackles (PAdj)", weight: 0.85 },
+          { name: "Defensive duels won per 90", weight: 0.85 },
+          { name: "Aerial duels won per 90", weight: 0.85 },
+          { name: "Possessions won - lost per 90", weight: 0.42 },
+          { name: "Progressive passes (PAdj)", weight: 0.42 }
+      ]
+  };
+
   function renderMetrics(position) {
+      const metrics = positionData[position];
       const container = document.getElementById(`${position}-metrics`);
       
       if (!container) return;
       
-      // Get all metric items from the container
-      const metricItems = container.querySelectorAll('.metric-item');
-      
-      if (metricItems.length === 0) return;
+      container.innerHTML = '';
       
       // Find the highest weight for scaling
-      const weights = Array.from(metricItems).map(item => parseFloat(item.dataset.weight));
-      const maxWeight = Math.max(...weights);
+      const maxWeight = Math.max(...metrics.map(metric => metric.weight));
       
-      // Update each weight bar
-      metricItems.forEach(item => {
-          const weight = parseFloat(item.dataset.weight);
-          const weightFill = item.querySelector('.weight-fill');
-          if (weightFill) {
-              // Scale relative to the highest weight in this position
-              weightFill.style.width = `${(weight / maxWeight) * 100}%`;
-          }
+      metrics.forEach(metric => {
+          const metricDiv = document.createElement('div');
+          metricDiv.className = 'metric-item';
+          
+          const metricName = document.createElement('div');
+          metricName.className = 'metric-name';
+          
+          const metricNameText = document.createElement('span');
+          metricNameText.textContent = metric.name;
+          
+          const weightBar = document.createElement('div');
+          weightBar.className = 'weight-bar';
+          
+          const weightFill = document.createElement('div');
+          weightFill.className = 'weight-fill';
+          // Scale relative to the highest weight in this position
+          weightFill.style.width = `${(metric.weight / maxWeight) * 100}%`;
+          
+          weightBar.appendChild(weightFill);
+          metricName.appendChild(metricNameText);
+          metricDiv.appendChild(metricName);
+          metricDiv.appendChild(weightBar);
+          container.appendChild(metricDiv);
       });
   }
 
   // Initialize Performance Index table
   document.addEventListener('DOMContentLoaded', function() {
-      // Initialize all position metrics
-      const positions = ['goalkeeper', 'striker', 'centre-back', 'midfielder', 'winger', 'full-back'];
-      positions.forEach(position => {
-          renderMetrics(position);
-      });
+      // Initialize goalkeeper metrics
+      renderMetrics('goalkeeper');
 
       // Event listeners for position buttons
       document.querySelectorAll('.perf-table-container .position-btn').forEach(btn => {
@@ -3255,7 +2569,20 @@ between players with the same name</li>
               if (targetContent) {
                   targetContent.classList.add('active');
               }
+              
+              // Render metrics if not already rendered
+              const metricsContainer = document.getElementById(`${position}-metrics`);
+              if (metricsContainer && !metricsContainer.hasChildNodes()) {
+                  renderMetrics(position);
+              }
           });
+      });
+
+      // Render all positions on load
+      Object.keys(positionData).forEach(position => {
+          if (position !== 'goalkeeper') {
+              renderMetrics(position);
+          }
       });
   });
 
