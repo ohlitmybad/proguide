@@ -1,4 +1,5 @@
 
+
 <html>
 <head>
 <meta "="" content="width=device-width" name="viewport"/>
@@ -46,6 +47,253 @@
  a:hover {
      color: #1d4ed8;
 }
+
+/* Performance Index Table Styles - Exact from hi.html */
+.perf-table-container {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.perf-table-container .position-selector {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.perf-table-container .position-btn {
+    padding: 8px 16px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.perf-table-container .position-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    color: #2563eb;
+}
+
+.perf-table-container .position-btn.active {
+    background-color: #eff6ff;
+    border-color: #2563eb;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.perf-table-container .position-content {
+    display: none;
+}
+
+.perf-table-container .position-content.active {
+    display: block;
+}
+
+.perf-table-container .metrics-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px 25px 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.perf-table-container .metrics-scroll-container {
+    height: 480px;
+    overflow-y: auto;
+    margin-top: 0px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 20px 0 0;
+}
+
+.perf-table-container .metrics-scroll-container > div {
+    padding: 0 0 0 20px;
+}
+
+.perf-table-container .metrics-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.perf-table-container .metrics-scroll-container::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 4px;
+    margin: 5px 0 0 0;
+}
+
+.perf-table-container .metrics-scroll-container::-webkit-scrollbar-track:empty {
+    display: none;
+}
+
+.perf-table-container .metrics-scroll-container::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+.perf-table-container .metrics-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+.perf-table-container #goalkeeper .metrics-scroll-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.perf-table-container #goalkeeper .metrics-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.perf-table-container #goalkeeper .metrics-scroll-container::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.perf-table-container .metric-item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    gap: 20px !important;
+    min-height: 32px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    height: auto !important;
+}
+
+.perf-table-container .metric-item:last-child {
+    border-bottom: none !important;
+}
+
+.perf-table-container .metric-name {
+    flex: 1 !important;
+    font-size: 0.95rem !important;
+    color: #374151 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.perf-table-container .metric-weight {
+    font-weight: 600;
+    color: #6b7280;
+    min-width: 70px;
+    text-align: right;
+    font-size: 0.95rem;
+    margin-left: auto;
+}
+
+.perf-table-container .weight-bar {
+    width: 120px;
+    height: 8px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.perf-table-container .weight-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.perf-table-container .metric-name span {
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    vertical-align: baseline !important;
+    font-size: 0.95rem !important;
+}
+
+@media (max-width: 768px) {
+    .perf-table-container .position-selector { gap: 10px !important; }
+    .perf-table-container .position-btn { padding: 10px 16px !important; font-size: 0.9rem !important; }
+    .perf-table-container .metric-item { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+    .perf-table-container .weight-bar { width: 100% !important; margin-left: 0 !important; }
+}
+
+/* Override any conflicting styles from the guide page */
+.perf-table-container * {
+    box-sizing: border-box !important;
+}
+
+.perf-table-container .metric-item,
+.perf-table-container .metric-name,
+.perf-table-container .metric-name span {
+    font-family: inherit !important;
+    line-height: inherit !important;
+}
+
+/* Force exact line-height and spacing */
+.perf-table-container .metric-item {
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 8px 0 !important;
+    height: auto !important;
+    min-height: 32px !important;
+    max-height: none !important;
+    font-size: 0.95rem !important;
+}
+
+.perf-table-container .metric-name {
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    font-size: 0.95rem !important;
+}
+
+.perf-table-container .metric-name span {
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    display: inline !important;
+    vertical-align: baseline !important;
+    font-size: 0.95rem !important;
+}
+
+/* Override any global styles that might be affecting line-height */
+.perf-table-container p,
+.perf-table-container div,
+.perf-table-container span {
+    line-height: inherit !important;
+}
+
+/* Force the exact same styling as hi.html */
+.perf-table-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    line-height: 1.6 !important;
+}
+
+.perf-table-container .metrics-container {
+    line-height: normal !important;
+}
+
+.perf-table-container .metrics-scroll-container {
+    line-height: normal !important;
+}
+
+
 /* Left Navigation */
  .nav-container {
      width: 218px;
@@ -843,7 +1091,7 @@
                 <h4>How to Use</h4>
                 <ul>
                     <li>Filters: Choose a metric, filter by league, position, and age</li>
-                    <li>Default is the Performance Index, our in-house metric aimed at determining who has been the highest performing player throughout the season in a specific league and position</li>
+                    <li>Default is the <a href="#performanceindex">Performance Index</a>, our in-house metric aimed at determining who has been the highest performing player throughout the season in a specific league and position</li>
                     <li>This metric is therefore available only for individual leagues and positions. Choice of 'All Leagues' or 'All positions' are greyed out when the metric is selected. Link to metric explanation</li>
                     <li>Some metrics do not have a total version (e.g., PAdj metrics, percentage metrics), but all per 90 metrics are available as totals</li>
                     <li>Click the timer toggle to switch between per 90 and totals</li>
@@ -1323,34 +1571,110 @@
         
                 <div id="performanceindex">
                     <h4>Performance Index</h4>
-                    <p>The Performance Index is defined differently for each position, and measured only for each individual league and position; meaning you won't be able to compare values across leagues and positions, and why these options are greyed out from the index tool when Performance Index metric is selected.</p>
-                    
-                    <p>Here is the corresponding metric table used for each position, along with their respective weight in the total score.</p>
-        <br>
-                    <ul>
-                        <li>
-                            <strong>Goalkeeper:</strong>
-Prevented goals per 90 x6, Save percentage % x4, Clean sheets x2, Pass completion % x2, Aerial duels per 90, Interceptions per 90, Passes per 90, Forward passes per 90, Short passes per 90, Long passes per 90, Exits per 90, Defensive duels won %, Forward pass completion %, Short pass completion %, Long pass accuracy %, Progressive pass accuracy %, Minutes played x6
-                        </li><br>
-                        <li>
-                            <strong>Centre-back:</strong>
-Defensive duels won % x4, Aerial duels won % x3, Forward passes per 90 x3, Pass completion % x3, Forward pass completion % x3, Progressive carries per 90 x2, Progressive passes per 90 x2, Possessions won per 90, Defensive duels per 90, Aerial duels per 90, Sliding tackles (PAdj), Shots blocked per 90, Interceptions (PAdj), Headed goals per 90, Key passes per 90, Passes to final third per 90, Passes to penalty box per 90, Through passes per 90, Short pass completion %, Long pass accuracy %, Minutes played x5                        </li><br>
-                        <li>
-                              <strong>Full-back:</strong>
-Progressive carries per 90 x4, Assists per 90 x3, Crosses per 90 x3, xA per 90 x3, Key passes per 90 x3, Progressive passes per 90 x3, Defensive duels won % x3, Possessions won per 90 x2, Defensive duels per 90 x2, Aerial duels per 90 x2, Sliding tackles (PAdj) x2, Shots blocked per 90 x2, Goals per 90 x2, xG per 90 x2, Offensive duels per 90 x2, Accelerations per 90 x2, Crosses to goalie box per 90, Touches in box per 90, Fouls suffered per 90, Forward passes per 90, Shot assists per 90, Passes to final third per 90, Passes to penalty box per 90, Through passes per 90, Deep completions per 90, Aerial duels won %, Cross accuracy %, Offensive duels won %, Forward pass completion %, Minutes played x7                        </li><br> 
-                        <li>
-                            <strong>Midfielder:</strong>
-Progressive passes per 90 x4, Defensive duels won % x4, Possessions won per 90 x3, Progressive carries per 90 x3, Key passes per 90 x3, Forward passes per 90 x2, Passes per 90, Long passes per 90, Forward pass completion %, xA per 90, Shot assists per 90, Passes to final third per 90, Passes to penalty box per 90, Through passes per 90, Deep completions per 90, Interceptions (PAdj), Shots blocked per 90 , Sliding tackles (PAdj), Aerial duels per 90, Aerial duels won %, Defensive duels per 90, Goals per 90, Non-penalty goals per 90, xG per 90, Shots per 90, Assists per 90, Crosses per 90, Dribbles attempted per 90, Offensive duels per 90, Accelerations per 90, Fouls suffered per 90, Minutes played x6 
-                        </li><br>
-                        <li>
-                            <strong>Winger & Att Mid:</strong>
-Non-penalty goals per 90 x9, xA per 90 x8, Goals per 90 x7, Assists per 90 x5, Fouls suffered per 90 x4, Dribbles attempted per 90 x3, Successful attacking actions per 90 x3, Crosses per 90 x3, Accelerations per 90 x3, Key passes per 90 x2, Crosses to goalie box per 90, Offensive duels won %, Cross accuracy %, Forward pass completion %, Minutes played x14                        </li><br>
-                        <li>
-                              <strong>Striker:</strong>
-Non-penalty goals per 90 x9, Goals per 90 x8, xG per 90 x5, Goal conversion % x4, Shots per 90 x3, Shots on target, % x2, Assists per 90 x2, Aerial duels won %, Offensive duels per 90, Dribbles attempted per 90, Crosses per 90, Progressive carries per 90, Accelerations per 90, Fouls suffered per 90, Minutes played x8                        </li><br>
-                    </ul>
-        
-                    <p>After looking at the percentiles within the player's league and position for all these metrics, the scores are combined and then brought to 100 and normalized with each metric weighted for their "importance" on the final score. Minutes played are included to give more weight to players who have affected more games.</p>
+                    <p>The Performance Index is a composite score that measures a player's overall consistency and performance over the league season. It is calculated separately for each league and position, so scores cannot be compared across leagues or positions. This is why other filters are disabled when this metric is selected. Since it reflects seasonal performance, minutes played are heavily factored in to reward players who consistently feature across the year.</p>
+
+                    <p>Each position is evaluated using its own set of weighted metrics:</p>
+ 
+                    <br>
+                    <div class="perf-table-container">
+                        <div id="goalkeeper" class="position-content active">
+                            <div class="metrics-container">
+                                <div class="position-selector">
+                                    <button class="position-btn active" data-position="goalkeeper">GK</button>
+                                    <button class="position-btn" data-position="centre-back">CB</button>
+                                    <button class="position-btn" data-position="full-back">FB</button>
+                                    <button class="position-btn" data-position="midfielder">CM</button>
+                                    <button class="position-btn" data-position="winger">FW</button>
+                                    <button class="position-btn" data-position="striker">ST</button>
+                                </div>
+                                <div class="metrics-scroll-container">
+                                    <div id="goalkeeper-metrics"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="striker" class="position-content">
+                            <div class="metrics-container">
+                                <div class="position-selector">
+                                    <button class="position-btn" data-position="goalkeeper">GK</button>
+                                    <button class="position-btn" data-position="centre-back">CB</button>
+                                    <button class="position-btn" data-position="full-back">FB</button>
+                                    <button class="position-btn" data-position="midfielder">CM</button>
+                                    <button class="position-btn" data-position="winger">FW</button>
+                                    <button class="position-btn active" data-position="striker">ST</button>
+                                </div>
+                                <div class="metrics-scroll-container">
+                                    <div id="striker-metrics"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="centre-back" class="position-content">
+                            <div class="metrics-container">
+                                <div class="position-selector">
+                                    <button class="position-btn" data-position="goalkeeper">GK</button>
+                                    <button class="position-btn active" data-position="centre-back">CB</button>
+                                    <button class="position-btn" data-position="full-back">FB</button>
+                                    <button class="position-btn" data-position="midfielder">CM</button>
+                                    <button class="position-btn" data-position="winger">FW</button>
+                                    <button class="position-btn" data-position="striker">ST</button>
+                                </div>
+                                <div class="metrics-scroll-container">
+                                    <div id="centre-back-metrics"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="midfielder" class="position-content">
+                            <div class="metrics-container">
+                                <div class="position-selector">
+                                    <button class="position-btn" data-position="goalkeeper">GK</button>
+                                    <button class="position-btn" data-position="centre-back">CB</button>
+                                    <button class="position-btn" data-position="full-back">FB</button>
+                                    <button class="position-btn active" data-position="midfielder">CM</button>
+                                    <button class="position-btn" data-position="winger">FW</button>
+                                    <button class="position-btn" data-position="striker">ST</button>
+                                </div>
+                                <div class="metrics-scroll-container">
+                                    <div id="midfielder-metrics"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="winger" class="position-content">
+                            <div class="metrics-container">
+                                <div class="position-selector">
+                                    <button class="position-btn" data-position="goalkeeper">GK</button>
+                                    <button class="position-btn" data-position="centre-back">CB</button>
+                                    <button class="position-btn" data-position="full-back">FB</button>
+                                    <button class="position-btn" data-position="midfielder">CM</button>
+                                    <button class="position-btn active" data-position="winger">FW</button>
+                                    <button class="position-btn" data-position="striker">ST</button>
+                                </div>
+                                <div class="metrics-scroll-container">
+                                    <div id="winger-metrics"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="full-back" class="position-content">
+                            <div class="metrics-container">
+                                <div class="position-selector">
+                                    <button class="position-btn" data-position="goalkeeper">GK</button>
+                                    <button class="position-btn" data-position="centre-back">CB</button>
+                                    <button class="position-btn active" data-position="full-back">FB</button>
+                                    <button class="position-btn" data-position="midfielder">CM</button>
+                                    <button class="position-btn" data-position="winger">FW</button>
+                                    <button class="position-btn" data-position="striker">ST</button>
+                                </div>
+                                <div class="metrics-scroll-container">
+                                    <div id="full-back-metrics"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <p>For each player, we look at their stats compared to others in the same league and position and compute their percentile rank for each metric. Then, we combine and weight these percentiles based on the metric's importance. This creates an average performance score, which we then normalize, scale, and transform to fit a digestible range. A score of 99 is awarded to a player in each position who achieves the highest dominance over their league peers.</p>
                 <br></div>
         
                 <div id="possession">
@@ -1481,6 +1805,11 @@ Non-penalty goals per 90 x9, Goals per 90 x8, xG per 90 x5, Goal conversion % x4
             <section id="news" class="section">
   <h2>News & Updates</h2>
 
+  <h4>July 21, 2025</h4>
+  <ul>
+    <li><strong>NEW</strong> — Improved performance index formulas for each position, with more metrics and more consistent results (Updated <a href="#performanceindex">Glossary</a>)</li>
+  </ul>
+  
 		    <h4>Jul 4, 2025</h4>
 <ul>
   <li><strong>NEW</strong> — Radar tool templates fully overhauled for every position (see <a href="#radarglossary">Radar Glossary</a> for details)</li>
@@ -1525,7 +1854,7 @@ between players with the same name</li>
   </li>
   <br><li><strong>NEW</strong> — Rank tool: Search bar now has autocomplete and no longer requires manually selecting from the dropdown</li>
   <br><li><strong>NEW</strong> — Stripe payments: added 6mo/1yr plans, links on join page, and immediate subscriber processing</li>
-  <br><li><strong>NEW</strong> — New contact address for business inquiries: contact@datamb.football</li>
+  <br><li><strong>NEW</strong> — New contact address for business inquiries: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5a6aaabb1a4a6b185a1a4b1a4a8a7eba3aaaab1a7a4a9a9">[email&#160;protected]</a></li>
 <br>
   <li><strong>FIX</strong> — Search bars now handle the "ł" character; it can be searched as "l"</li>
   <br><li><strong>FIX</strong> — Switched to a new DNS for faster, more secure loading, better caching, and fixed connection issues (notably in Cameroon)</li>
@@ -1644,14 +1973,14 @@ between players with the same name</li>
             <br>
             <iconify-icon icon="mdi:email" width="20" height="20"
               style="vertical-align: middle; margin-right: 3px;"></iconify-icon>
-            <a href="mailto:contact@datamb.football">contact@datamb.football</a>
+            <a href="/cdn-cgi/l/email-protection#bbd8d4d5cfdad8cffbdfdacfdad6d995ddd4d4cfd9dad7d7"><span class="__cf_email__" data-cfemail="284b47465c494b5c684c495c49454a064e47475c4a494444">[email&#160;protected]</span></a>
             
               
 
            
           </div> </section></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
  
 
   function getPreferredLanguage() {
@@ -1928,6 +2257,60 @@ between players with the same name</li>
   document.addEventListener('DOMContentLoaded', function() {    
 
     reattachNavigationEventListeners();
+  });
+
+  
+  // Performance Index Table JavaScript - Updated to read from HTML
+  function renderMetrics(position) {
+      const container = document.getElementById(`${position}-metrics`);
+      
+      if (!container) return;
+      
+      // Get all metric items from the container
+      const metricItems = container.querySelectorAll('.metric-item');
+      
+      if (metricItems.length === 0) return;
+      
+      // Find the highest weight for scaling
+      const weights = Array.from(metricItems).map(item => parseFloat(item.dataset.weight));
+      const maxWeight = Math.max(...weights);
+      
+      // Update each weight bar
+      metricItems.forEach(item => {
+          const weight = parseFloat(item.dataset.weight);
+          const weightFill = item.querySelector('.weight-fill');
+          if (weightFill) {
+              // Scale relative to the highest weight in this position
+              weightFill.style.width = `${(weight / maxWeight) * 100}%`;
+          }
+      });
+  }
+
+  // Initialize Performance Index table
+  document.addEventListener('DOMContentLoaded', function() {
+      // Initialize all position metrics
+      const positions = ['goalkeeper', 'striker', 'centre-back', 'midfielder', 'winger', 'full-back'];
+      positions.forEach(position => {
+          renderMetrics(position);
+      });
+
+      // Event listeners for position buttons
+      document.querySelectorAll('.perf-table-container .position-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+              const position = btn.dataset.position;
+              
+              // Update active button across ALL position selectors
+              document.querySelectorAll('.perf-table-container .position-btn').forEach(b => b.classList.remove('active'));
+              document.querySelectorAll(`.perf-table-container [data-position="${position}"]`).forEach(b => b.classList.add('active'));
+              
+              // Update active content
+              document.querySelectorAll('.perf-table-container .position-content').forEach(c => c.classList.remove('active'));
+              const targetContent = document.querySelector(`.perf-table-container #${position}`);
+              if (targetContent) {
+                  targetContent.classList.add('active');
+              }
+          });
+      });
   });
 
   </script>
