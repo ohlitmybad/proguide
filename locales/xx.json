@@ -10,6 +10,14 @@
     "title": "DataMB | Guide",
     "description": "Explanation of the tools, metrics, and methodology used by DataMB"
   },
+    "positions": {
+    "goalkeeper": "Goalkeeper",
+    "centreback": "Centre-back",
+    "fullback": "Full-back",
+    "midfielder": "Midfielder",
+    "winger": "Winger",
+    "striker": "Striker"
+  },
   "search": {
     "placeholder": "Enter a team or player name..."
   },
