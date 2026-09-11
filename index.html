@@ -525,7 +525,7 @@
                   <li><a href="#plot">Plot</a></li>
                   <li><a href="#rank">Rank</a></li>
                   <li><a href="#index">Index</a></li>
-                  <li><a href="#search">Search</a></li>
+                  <li><a href="#scout">Scout</a></li>
                   <li><a href="#aichat">AI Chat</a></li>
                   <li><a href="#teamtools">Teams</a></li>
                   <li><a href="#profiles">Profiles</a></li>
@@ -567,7 +567,7 @@
                     <li>A range of interactive tools to present data effectively in various formats. Look up data the way you want it, present the data the way you want it:</li> 
                      <ul>
                       <li>Starting with the players: <a href="#radar">Radar</a> and <a href="#rank">Rank</a></li>
-                      <li>Starting with the metrics: <a href="#plot">Plot</a>, <a href="#index">Index</a>, and <a href="#search">Search</a></li>
+                      <li>Starting with the metrics: <a href="#plot">Plot</a>, <a href="#index">Index</a>, and <a href="#scout">Scout</a></li>
                      </ul>
                     
                 </ul>
@@ -618,7 +618,7 @@
                     <li><a href="#plot">Plot tool</a> (Graph up to 3 metrics at a time)</li>
                     <li><a href="#index">Index tool</a> (Advanced performance leaderboards)</li>
                     <li><a href="#rank">Rank tool</a> (In-depth player data profiles)</li>
-                    <li><a href="#search">Search tool</a> (Player search by attributes)</li>
+                    <li><a href="#scout">Scouting tool</a> (Player search by attributes)</li>
                     <li><a href="#aichat">DataMB Chat</a> (AI Agent for data queries and custom chart generation)</li>
                     <li><a href="#teamtools">Team plots & radars</a> (Same as the free version)</li>
                 </ul>
@@ -748,31 +748,33 @@
                     <ul>
                       <li>Leagues: All 55 leagues</li>
                         <li>Seasons: Current & past season</li>
-                        <li>Metrics: <a href="#allmetrics">100+ metrics</a> (per 90)</li>
+                        <li>Metrics: <a href="#allmetrics">100+ metrics</a> (both per 90 and Total)</li>
                     </ul><br>
                     <h4>How to Use</h4>
-                <ol>
-                    <li>Choose a position template</li>
-                    <li>First dropdown controls metrics for the x-axis</li>
-                    <li>Second dropdown controls metrics for the y-axis</li>
-                    <li>Third dropdown controls dot size</li>
-                    <li>Filter by age and league</li>
-                  </ol>
                 <ul>
-                  <li>Metrics are sorted by categories</li>
-                    <li>Hover over a dot to read player details (name and raw values for all three metrics)</li>
-                    <li>Search by last name to find and highlight a player</li>
+<li>Choose or combine positions</li>
+                    <li>Choose or combine leagues</li>
+                    <li>Choose metrics for y-axis, x-axis and dot size</li>
+                    <li>Filter by age</li>
+		<li>Filter by minutes played or your choice of metric</li>
+		                    <li>Click the timer toggle to switch between per 90 and totals</li>
+		  <li>Hover over a dot to read player details (name and raw values for all three metrics)</li>
                     <li>Click on a dot to show/hide the player's name on the plot</li>
-                    <li>The circular toggle selects/unselects all visible dots (names may be omitted for readability)</li>
-                    <li>Click on the chart icon to add/remove median lines</li>
-                    <li>Identity (x=y) line appears when both Goals and xG (or Assists and xA, etc) are selected, this helps visualize who is over/underachieving on their expected values</li>
-                    <li>Dot colors are league-based for ease of distinction, legend is displayed when 2-10 leagues are selected</li>
-		 <li>Third metric selector (dot size) can be set to "None" for default dot size</li>
-                    <li>Click on the camera icon to generate a screenshot</li>
-                    <li>By essence, plots use per 90 metrics rather than totals; but selecting minutes played via dot size can provide context</li>
-                    <li>Click on "Previous" to load data from the previous season</li>
-		<li>The chart dimensions will depend on your window size, tilt your mobile horizontally for a better view</li>
-                </ul><br>
+                    <li>Click the circular toggle to select/unselect all visible dots (names may be omitted for readability)</li>
+                    <li>Click the chart toggle to add/remove median lines</li>
+                    <li>Click the camera icon to generate a screenshot</li>
+                    <li>Click the calendar toggle to switch between current and past season data</li>
+<li>Click template toggle for x and y metric presets</li>
+<li>Search by last name or team to find and highlight a player, enter to click</li>
+<li>Third metric selector (dot size) can be set to "None" for default dot size</li>
+<li>Identity (x=y) line appears when both Goals and xG (or Assists and xA, etc) are selected, this helps visualize who is over/underachieving on their expected values</li>
+<li>Dot colors are league-based for ease of distinction, legend is displayed when 2-10 leagues are selected</li>
+<li>The chart dimensions will depend on your window size, tilt your mobile horizontally for a better view
+</li>
+					
+				</ul>
+					  
+					  <br>
                   </div>
                 </div>
                 
@@ -795,7 +797,7 @@
                     </ul><br>
                     <h4>How to Use</h4>
              
-                    <ul><li>Search by last name and select name from dropdown</li  >
+                    <ul><li>Search by last name and select name from dropdown</li >
                     <li>Select the sample you want to compare to (default is League and Position per 90)</li>
               
                 <ul>
@@ -810,20 +812,17 @@
                     <li>Per 90 & Total: Both available for each sample</li>
                 </ul><br>
         
-                
-                    <li>Click the blue toggle to switch from Per 90 to Total</li>
-                    <li>Bars will be displayed from best to worst rank. Click the green toggle to switch from this ascending order to a default order of metrics for the player's position, grouped by similar data categories and significance</li>
-                    <li>You can restrict the sample further using age filters</li>
-                    <li>The tool will display the player's rank in the chosen sample for all of our metrics in bar format. It will also display a pizza chart containing 12 default metrics</li>
-                    <li>Click the chart icon to customize the Pizza chart and add/remove any metric. Your choice of metrics for each position will be saved for the duration of your session.</li>
-                    <li>The size and color of both pizza segments & rank bars are determined using the percentile value equivalent to the player's rank in the sample</li>
+ <li>Restrict the sample further using age filters</li>
+		<li>Click the timer toggle to switch between per 90 and totals</li>
+		<li>Click the calendar toggle to switch between current and past season data</li>
+		<li>Click the pencil icon to customize the Pizza chart and add/remove any metric or choose from our presets</li>
+<li>Click the ascending toggle to switch from showing best ranks first to a default order of metrics</li>
+<li>Click the percentile toggle to switch from absolute rank to percentile values</li>
+                    <li>The size and color of both pizza segments & rank bars are determined using the percentile value equivalent to the player's rank in the sample</li>  
                     <li>Hover on a rank bar to read the raw value for the statistic</li>
                     <li>Click on a rank bar to show/hide the value permanently</li>
-			<li>Click the calendar toggle to switch between current and past season data</li>
-
-                  </ul>
-        <br>
-                <strong>Note: </strong>If the spinner loads indefinitely, the player may not be in the chosen sample (too old for age selection, Eredivisie/Liga Primeira player compared against Top 5)</p>
+		<li>Exclude or re-arrange position of rows</li>					
+					</ul>
         <br>
                   </div>
                 </div>
@@ -842,46 +841,46 @@
                   <li>Seasons: Current & past season</li>
                     <li>Metrics: <a href="#allmetrics">100+ metrics</a> (both per 90 and total)</li>
                 </ul><br>
-                <h4>How to Use</h4>
-                <ul>
-                    <li>Filters: Choose a metric, filter by league, position, and age</li>
-                    <li>Default is the <a href="#performanceindex">Performance Index</a>, our in-house metric aimed at determining who has been the highest performing player throughout the season in a specific league and position</li>
-                    <li>This metric is therefore available only for individual leagues and positions. Choice of 'All Leagues' or 'All positions' are greyed out when the metric is selected. Link to metric explanation</li>
-                    <li>Some metrics do not have a total version (e.g., PAdj metrics, percentage metrics), but all per 90 metrics are available as totals</li>
+                <h4>How to Use</h4><ul>
+<li>Choose one or two metrics</li>
+                    <li>Choose or combine positions</li>
+                    <li>Choose or combine leagues</li>
+                    <li>Filter by age</li>
+		   <li>Filter by minutes played or your choice of metric</li>
                     <li>Click the timer toggle to switch between per 90 and totals</li>
+		    <li>Click the calendar toggle to switch between current and past season data</li>
+		<li>Search by last name or team to find and highlight a player</li>
                     <li>For the metrics where applicable, click the arrow to sort by ascending or descending order</li>
-                    <li>Metrics are sorted by categories (greyed out items in the selectors)</li>
+                    <li><a href="#performanceindex">Performance Index</a> available for individual leagues and positions only</li>
                     <li>Bar size indicate performance relative to the top performer's value in the metric (except for the Performance Index, where 100 is used as the top value)</li>
                     <li>Color indicates player percentile rank for the metric in the sample</li>
-		 <li>Click the calendar toggle to switch between current and past season data</li>
-                </ul>
-        
+				  </ul>
                 <br>
               </div>
               <hr class="tool-divider">
-              <div id="search">
-                <h3>Search — <i>Pro</i></h3>
+              <div id="scout">
+                <h3>Scout — <i>Pro</i></h3>
                 <div class="tool-section">
-                  <div class="tool-description">          <img src="https://datamb.football/guideimg/search.png" alt="Search Tool" class="responsive-image">
+                  <div class="tool-description">          <img src="https://datamb.football/guideimg/search.png" alt="Scouting Tool" class="responsive-image">
         
-                    <p>Radars, but the other way around. Instead of searching for a player to get their data, search for specific data and find the matching player(s).</p>
+                    <p>Search for specific metrics and profiles in the data and find the matching player(s)</p>
                     <ul>
                         <li>Leagues: All 55 leagues</li>
                         <li>Seasons: Current & past season</li>
-                        <li>Metrics: <a href="#radarglossary">7 key metrics</a> per position 
-                          <li>Like the radar tool, it uses per 90 percentiles instead of raw values</li>
-                        <li>Top 7 leagues percentiles computed together by season and position</li>
-                        <li>All other leagues percentiles computed together by season and position</li>
+						 <li>Metrics: <a href="#allmetrics">100+ metrics</a> (both per 90 and Total)</li>
+
                     </ul><br>
-                    <h4>How to Use</h4>
-                <ul>
-                      <li>Choose a position template</li>
-                      <li>Filter by league, age, minutes played</li>
-                      <li>Search for players ranking over specific radar percentile values</li>
-                      <li>Combine multiple metrics to refine your search results</li>
-			<li>Click on the metric headers to sort your table</li>  
-                      <li>Click on "Previous" to load data from the previous season</li>
-                </ul>
+                    <h4>How to Use</h4><ul>
+                         <li>Choose or combine positions</li>
+                    <li>Choose or combine leagues</li>
+		   <li>Select metrics to scout for, or pick for one of our presets</li>
+                    <li>Filter by age</li>
+                    <li>Click the timer toggle to switch between per 90 and totals</li>
+<li>Click the raw value toggle to switch between percentiles and raw values</li>
+		<li>Click on Quick Search to jump in predefined profiles<li>
+		    <li>Click the calendar toggle to switch between current and past season data</li>
+<li>Click on a player to show to show his radar for the selected metrics</li>
+<li>Search by last name or team to find and highlight a player</li></ul><br>
               </div>
             </div>       </div>
           </div>
@@ -1473,7 +1472,56 @@
         
             <section id="news" class="section">
   <h2>News & Updates</h2>
+<h4>September 11, 2026</h4>
+<ul>
 
+  <li><strong>NEW</strong> — Index Tool overhaul<br>
+    • Combine leagues or positions together<br>
+    • Add two metrics together and view the bar split<br>
+    • Search for players in the leaderboard<br>
+    • Search for metrics in the selector<br>
+    • Filter by minutes (or any other metric)<br>
+    • And more
+  </li><br>
+  <li><strong>NEW</strong> — Rank Tool overhaul<br>
+    • Toggle rows between rank and percentile<br>
+    • Search for metrics in the pizza selector<br>
+    • Preset archetypes added to the pizza selector<br>
+    • Exclude rows and rearrange rows up and down<br>
+    • Pizza now shows real values instead of percentiles<br>
+    • Added minutes played info<br>
+    • And more
+  </li><br>
+  <li><strong>NEW</strong> — Plot Tool overhaul<br>
+    • Merged all positions into one page<br>
+    • Added plot Total view (non per-90)<br>
+    • Filter by minutes (or any other metric)<br>
+    • Combine positions together or go position-less<br>
+    • Combine leagues together<br>
+    • Added plot templates to choose from<br>
+    • Search for metrics in the selectors<br>
+    • Added missing diagonal lines<br>
+    • Negative metrics now plot in the opposite direction<br>
+    • Pressing enter on search highlights the selected dot<br>
+    • Relevant new features also ported to team plots<br>
+    • And more
+  </li><br>
+  <li><strong>NEW</strong> — Search rebranded as Scouting Tool<br>
+    • All metrics now available, not just radar ones<br>
+    • Combine positions together or go position-less<br>
+    • Combine leagues together<br>
+    • Choose Per 90 or Total<br>
+    • Choose Percentile or Raw search<br>
+    • Pick between all metrics or pick our presets<br>
+    • Search within the metrics<br>
+    • Quick Search predefined profiles<br>
+    • Results now refresh immediately<br>
+    • Click a row to show a radar with the selected metrics<br>
+    • Search within results<br>
+    • And more
+  </li><br><li><strong>FIX</strong> — Performance issues resolved on all four updated tools
+  </li>
+</ul>
 								<h4>September 8, 2026</h4>
 <ul>
 	  <li><strong>NEW</strong> — 2026/27 season update<br>
